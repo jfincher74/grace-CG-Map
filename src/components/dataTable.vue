@@ -1,8 +1,16 @@
 <template>
-  <div>
+  <div class="cgList">  
     <vue-good-table
-      :columns="columns"
-      :rows="rows"/>
+    @on-selected-rows-change="selectionChanged"
+    :columns="columns"
+    :rows="rows"
+    :select-options="{ enabled: true }"
+    :search-options="{ enabled: true }"
+    ref="myTable">
+    <div slot="selected-row-actions">
+    <button @click="action()">Action 1</button>
+  </div>
+    </vue-good-table>
   </div>
 </template>
 
@@ -14,6 +22,12 @@ import 'vue-good-table/dist/vue-good-table.css'
 export default {
   components:{
       VueGoodTable
+  },
+  methods:{
+    action: function(){
+        // this.$refs['my-table'].selectedRows
+      console.log(this.$refs.myTable.selectedRows)
+    }
   },
   data(){
     return {
@@ -52,3 +66,10 @@ export default {
   },
 };
 </script>
+<style scoped>
+
+.cgList {
+  size: 80%;
+}
+
+</style>
