@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="cg-List">
+      <dataTable />
+    </div>
   </div>
 </template>
-<!-- testing git -->
+
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import dataTable from './components/dataTable.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    dataTable
   }
 }
 </script>
@@ -26,4 +28,10 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.cg-list {
+  padding: 100px;
+}
+
+
 </style>
