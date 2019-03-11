@@ -4,6 +4,7 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
+<!-- testing git -->
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
