@@ -1,21 +1,47 @@
 <template>
-  <div id="app">
-    
-      <dataTable/>
-      <cgMap msg="let us prove we are still alive!"></cgMap>
-
+  <div id="app" class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center">Grace City Group Finder</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <dataTable class="dataTable"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center">
+          <div> </div>
+        </h1>
+        <!-- <Mapbox/> -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center">Placement holder for map</h1>
+        <!-- <Mapbox/> -->
+      </div>
+    </div>
   </div>
 </template>
 
 
 <script>
 import dataTable from './components/dataTable.vue'
-import cgMap from './components/cgMap.vue'
+// import cgMap from './components/Mapbox.vue'
 
 export default {
   name: 'app',
   components: {
-    dataTable, cgMap
+    dataTable, 
+    // cgMap
   }
 }
 </script>
+<style>
+.dataTable{
+    padding: bottom 100px
+}
+</style>
