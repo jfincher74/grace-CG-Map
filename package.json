@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "vue": "^2.6.6",
-    "vue-good-table": "^2.16.3"
+    "vue-good-table": "^2.16.3",
+    "vue2-mapbox": "^0.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
