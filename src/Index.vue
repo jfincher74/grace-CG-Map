@@ -1,20 +1,21 @@
 <template>
   <div id="app">
     
-      <dataTable />
+      <dataTable/>
+      <cgMap msg="let us prove we are still alive!"></cgMap>
 
   </div>
 </template>
 
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 import dataTable from './components/dataTable.vue'
+import cgMap from './components/cgMap.vue'
 
 export default {
   name: 'app',
   components: {
-    dataTable
+    dataTable, cgMap
   }
 }
 </script>
