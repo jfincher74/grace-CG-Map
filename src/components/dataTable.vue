@@ -25,7 +25,6 @@ export default {
   },
   methods:{
     action: function(){
-        // this.$refs['my-table'].selectedRows
       console.log(this.$refs.myTable.selectedRows)
     }
   },
@@ -67,9 +66,5 @@ export default {
 };
 </script>
 <style scoped>
-
-.cgList {
-  size: 80%;
-}
 
 </style>
