@@ -1,6 +1,6 @@
 <template>
   <div class="cgList">  
-    <vue-good-table class="dataTable"
+    <vue-good-table
     @on-selected-rows-change="selectionChanged"
     :columns="columns"
     :rows="rows"
@@ -8,7 +8,7 @@
     :search-options="{ enabled: true }"
     ref="myTable">
     <div slot="selected-row-actions">
-        <button @click="action()">Action 1</button>
+    <button @click="action()">Find a Group</button>
     </div>
     </vue-good-table>
   </div>
@@ -16,7 +16,7 @@
 
 <script>
 import { VueGoodTable } from 'vue-good-table';
-import 'vue-good-table/dist/vue-good-table.css'
+import 'vue-good-table/dist/vue-good-table.css';
 
 
 export default {
@@ -36,19 +36,19 @@ export default {
           field: 'name',
         },
         {
-          label: 'Age',
+          label: 'Type',
           field: 'age',
           type: 'number',
         },
         {
-          label: 'Created On',
+          label: 'Meeting Times',
           field: 'createdAt',
           type: 'date',
           dateInputFormat: 'YYYY-MM-DD',
           dateOutputFormat: 'MMM Do YY',
         },
         {
-          label: 'Percent',
+          label: 'City',
           field: 'score',
           type: 'percentage',
         },
@@ -66,7 +66,5 @@ export default {
 };
 </script>
 <style scoped>
-.dataTable{
-    padding: bottom 1000px
-}
+
 </style>
