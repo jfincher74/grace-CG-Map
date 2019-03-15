@@ -1,0 +1,13 @@
+/** 
+    Step 1: Add a table with mock data from a mock json.
+        set up environment and VUE components    ./
+        have mock data.     
+        massage table to hold data  
+        customize and style table
+        ---
+    Step 2: Make a filter header that add parameters to table date.
+        ---
+    Step 3: Add map with table that has points on it representing addresses from the endpoints.
+        ---
+    Step 4: Make map interactive with filters.
+**/

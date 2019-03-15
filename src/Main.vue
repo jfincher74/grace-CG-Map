@@ -10,24 +10,18 @@
         <dataTable/>
       </div>
     </div>
-    <div class="row">
-      <div class="col">
-        <h1 class="text-center">Placement holder for map</h1>
-        <cgMap/>
-      </div>
-    </div>
   </div>
 </template>
 
 
 <script>
 import dataTable from './components/dataTable.vue'
-import cgMap from './components/cgMap.vue'
+
 
 export default {
   name: 'app',
   components: {
-    dataTable, cgMap
+    dataTable, 
   }
 }
 </script>
