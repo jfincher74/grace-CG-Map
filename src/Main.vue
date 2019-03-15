@@ -7,21 +7,12 @@
     </div>
     <div class="row">
       <div class="col">
-        <dataTable class="dataTable"/>
+        <dataTable/>
       </div>
     </div>
     <div class="row">
       <div class="col">
-        <h1 class="text-center">
-          <div> </div>
-        </h1>
-        <!-- <Mapbox/> -->
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <h1 class="text-center">Placement holder for map</h1>
-        <!-- <Mapbox/> -->
+        <cgMap/>
       </div>
     </div>
   </div>
@@ -29,19 +20,16 @@
 
 
 <script>
+
+
 import dataTable from './components/dataTable.vue'
-// import cgMap from './components/Mapbox.vue'
+import cgMap from './components/cgMap.vue'
 
 export default {
   name: 'app',
   components: {
-    dataTable, 
-    // cgMap
+    dataTable, cgMap
   }
 }
+
 </script>
-<style>
-.dataTable{
-    padding: bottom 100px
-}
-</style>
