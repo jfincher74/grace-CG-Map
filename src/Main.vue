@@ -10,18 +10,26 @@
         <dataTable/>
       </div>
     </div>
+    <div class="row">
+      <div class="col">
+        <cgMap/>
+      </div>
+    </div>
   </div>
 </template>
 
 
 <script>
-import dataTable from './components/dataTable.vue'
 
+
+import dataTable from './components/dataTable.vue'
+import cgMap from './components/cgMap.vue'
 
 export default {
   name: 'app',
   components: {
-    dataTable, 
+    dataTable, cgMap
   }
 }
+
 </script>

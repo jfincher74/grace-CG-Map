@@ -13,15 +13,31 @@
     <noscript>
       <strong>We're sorry but gracechurch-cg doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app">
-    </div>
-    <div id="map" style="height:300px; width: 900px" class="container">
+    <div id="app"></div>
+    <div id="map" class="container">
       <div class="row">
         <div class="col-12">
-            <div id="map" class="map"></div>
+            <div id="map" class="map" style="height:300px; width:600px"></div>
+        </div>
+        <div class="col-md-3">
+          <div
+          class="form-check"
+          v-for="layer in layers"
+          :key="layer.id">
+            <label class="form-check-label">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                v-model="layer.active"
+                @change="layerChanged(layer.id, layer.active)"
+              />
+            {{ layer.name }}
+            </label>
+          </div>  
         </div>
       </div>
     </div>
+  </div>
   <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
   </body>
 </html>
