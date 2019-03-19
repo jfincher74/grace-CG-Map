@@ -7,12 +7,12 @@
     </div>
     <div class="row">
       <div class="col">
-        <dataTable/>
+        <CgDataTable/>
       </div>
     </div>
     <div class="row">
       <div class="col">
-        <cgMap/>
+        <CgMap/>
       </div>
     </div>
   </div>
@@ -22,13 +22,14 @@
 <script>
 
 
-import dataTable from './components/dataTable.vue'
-import cgMap from './components/cgMap.vue'
+import CgDataTable from './components/CgDataTable.vue'
+import CgMap from './components/CgMap.vue'
 
 export default {
   name: 'app',
   components: {
-    dataTable, cgMap
+    CgDataTable, 
+    CgMap
   }
 }
 
