@@ -8,15 +8,9 @@
         <div class="row">
             <div class="col-12">
                 <div class="form-check" v-for="layer in layers" :key="layer.id">
-                    <label class="form-check-label">
-                        <input
-                        class="form-check-input"
-                        type="checkbox"
-                        v-model="layer.active"
-                        @change="layerChanged(layer.id, layer.active)"
-                        />
-                    {{ layer.name }}
-                    </label>
+                    <div class="form-check-label">
+                        <input class="form-check-input" type="checkbox" v-model="layer.active" @change="layerChanged(layer.id, layer.active)" /> {{ layer.name }}
+                    </div>
                 </div>  
             </div>
         </div>
@@ -26,8 +20,8 @@
 <script>
 
 export default {
-    data() {
-        return{ 
+    data: function(){ 
+        return {
             map: null,
             tileLayer: null,
             layers: [
@@ -86,6 +80,7 @@ export default {
                 },
             ]
         }
+        
     },
     mounted() {
         this.initMap();
