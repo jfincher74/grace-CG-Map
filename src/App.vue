@@ -28,8 +28,7 @@ import CgMap from './components/CgMap.vue'
 export default {
   name: 'app',
   components: {
-    CgDataTable, 
-    CgMap
+    CgDataTable, CgMap
   }
 }
 

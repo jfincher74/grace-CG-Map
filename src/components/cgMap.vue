@@ -1,31 +1,29 @@
 <template> 
-    <div id="cgMap" class="container">
+    <div id="map" class="container">
         <div class="row">
-          <div class="col-12">
-              <div id="map" class="map"></div>
-          </div>
-          <div class="col-md-3">
-            <div
-            class="form-check"
-            v-for="layer in layers"
-            :key="layer.id">
-              <label class="form-check-label">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  v-model="layer.active"
-                  @change="layerChanged(layer.id, layer.active)"
-                />
-              {{ layer.name }}
-              </label>
-            </div>  
-          </div>
+            <div class="col-12">
+                <div id="map" class="map"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-check" v-for="layer in layers" :key="layer.id">
+                    <label class="form-check-label">
+                        <input
+                        class="form-check-input"
+                        type="checkbox"
+                        v-model="layer.active"
+                        @change="layerChanged(layer.id, layer.active)"
+                        />
+                    {{ layer.name }}
+                    </label>
+                </div>  
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-// import Vue from 'vue'
 
 export default {
     data() {
@@ -36,7 +34,7 @@ export default {
                 {
                     id: 0,
                     name: 'Restaurants',
-                    active: false,
+                    active: true,
                     features: [
                         {
                         id: 0,
@@ -129,5 +127,9 @@ export default {
 };
 </script>
 <style scoped>
+
+#map {
+    height: 600px;
+}
 
 </style> 
